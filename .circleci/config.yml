@@ -58,11 +58,9 @@ jobs:
       - attach_workspace:
           at: ./
       - run:
-          # Install the nodejs / npm - We've already set up the required keys
           name: Download terraform
           command: curl -o terraform.zip https://releases.hashicorp.com/terraform/0.12.10/terraform_0.12.10_linux_amd64.zip
       - run:
-          # Install the nodejs / npm - We've already set up the required keys
           name: Install terraform
           command: unzip terraform.zip; export PATH=`pwd`:$PATH; echo $PATH; ls -la;
       - run:
