@@ -11,7 +11,7 @@ resource "aws_lambda_permission" "Yogalates-courses" {
 resource "aws_lambda_function" "Yogalates-courses" {
   filename      = "../artifact/artifact.zip"
   function_name = "Yogalates-courses"
-  role          = "arn:aws:iam::${var.aws_account}:role/BasicLambdaRole"
+  role          = "arn:aws:iam::368263227121:role/BasicLambdaRole"
   handler       = "index.handler"
   source_code_hash = "${filebase64sha256("../artifact/artifact.zip")}"
   runtime       = "nodejs12.x"
